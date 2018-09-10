@@ -9,6 +9,7 @@ if(isset($_POST['reg']))
   $pswd= $_POST['password'];
   $pswd2= $_POST['password2'];
   $d= date("Y-m-d");
+  $check_0 = isset($_POST['check'][0]) ? 1 : 0;
 
   if($fn&&$ln&&$un&&$em&&$em2&&$pswd&&$pswd2)
   {

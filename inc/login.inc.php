@@ -17,7 +17,10 @@ if(isset($_POST['login']))
     }
     else
     {
-        echo "Incorred Password";
+        echo "
+        <script>
+          alert('Incorrect password');
+        </script>";
     }
 
   }
