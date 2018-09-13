@@ -7,6 +7,8 @@ var final = document.querySelector(".final");
 var nextBtn = document.querySelector(".next");
 var user_status = document.querySelector(".email_status");
 var pass_status = document.querySelector(".pass_status");
+var greetings = document.querySelector("#log");
+var currentUser = document.querySelector("#new-details");
 
 username.addEventListener("click", activateItem);
 next.addEventListener("click", nextItem);
@@ -24,6 +26,7 @@ function activateItem1(){
     pass.classList.add("usernameplacing")
 }
 
+
 back.addEventListener("click", function(){
     event.preventDefault()
     $(pass).toggleClass('hidden')
@@ -33,6 +36,12 @@ back.addEventListener("click", function(){
     nextBtn.classList.remove("hidden")
     user_status.classList.remove("hidden")
     pass_status.classList.add("hide")
+    pass.value = "";
+    $(greetings).html("Sign In"); 
+    $(currentUser).html("with your Rotaract account")
+    currentUser.classList.remove("grad")
+    
+    
 });
 
 
@@ -60,6 +69,11 @@ function nextItem(){
         $(final).removeClass('hide')
         user_status.classList.add("hidden")
         pass_status.classList.remove("hide")
+        $(greetings).html("Hello")
+        currentUser.classList.add("grad")
+        $(currentUser).html(username.value).hide().fadeIn('slow')
+
+
     }
 }
 

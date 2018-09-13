@@ -20,12 +20,12 @@ if(isset($_POST['confirm']))
     setcookie('SNID', 1, time()-3600);
     setcookie('SNID_', 1, time()-3600);
   }
-  header("Location: index.php");
+  header("Location: index");
 }
  ?>
  <h1>Logout of your account?</h1>
  <p>Are you sure you'd like to logout?</p>
-<form action="logout.php" method="post">
+<form action="logout" method="post">
   <input type="checkbox" name="alldevices" value="alldevices">Logout of all devices?<br />
   <input type="submit" name="confirm" value="Confirm">
 </form>

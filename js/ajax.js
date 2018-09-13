@@ -6,7 +6,7 @@ function checkit(){
     {
       $.ajax({
         type: 'POST',
-        url: 'checkdata.php',
+        url: 'checkdata',
         data: {
           usernameTrue: usernameCheck,
         },
