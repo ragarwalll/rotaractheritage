@@ -1,11 +1,12 @@
-<?php include ( "./inc/header.inc.php"); include ( "./inc/register.inc.php" );?>
+<?php $carousel="no"; 
+include ( "./inc/header.inc.php"); include ( "./inc/register.inc.php" );?>
 <div id="wrapper">
-  <br></br>
+  <br>
   <table align="center">
     <tr>
       <td class="box2">
         <h2>Members Login</h2>
-        <form action="connectwithus.php" method="POST">
+        <form action="" method="POST">
           <p /><input type="text" name="fname" size="25" placeholder="First Name" /><p />
           <input type="text" name="lname" size="25" placeholder="Last Name" /><p />
           <input type="text" name="username" size="25" placeholder="Username" /><p />

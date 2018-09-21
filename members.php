@@ -16,11 +16,11 @@ $(".cover").css({"background": "url(./assets/members/heroBg.jpg)","width":"100%"
 
      <section class="center slider">
      <?php
-      $userid = DB::query('SELECT * FROM members');  
+      $userid = DB::query('SELECT * FROM council');  
       foreach($userid as $p){
       echo "
       <div>
-            <img data-lazy='./assets/members/".$p['dp']."' alt=''>
+            <img data-lazy='./assets/members/".$p['dp']."' id='img' alt=''>
             <h3 class='h3_class'>".$p['name']."</h3>
             <p class='p_class'>".$p['post']."</p>
       </div>";
@@ -71,5 +71,10 @@ $(".cover").css({"background": "url(./assets/members/heroBg.jpg)","width":"100%"
 });
 
 </script>
+<style>
+      #img:hover{
+            
+      }
+</style>
 </body>
 </html>

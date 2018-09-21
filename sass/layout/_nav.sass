@@ -11,6 +11,7 @@ nav ul li:last-child
   background: #fff
   opacity: 0
   transition: all 0.2s ease
+  visibility: hidden
 
 .nav-wrapper ul
   float: right
@@ -80,6 +81,8 @@ nav ul li:last-child
   background: #000
   border-radius: 2px
   margin-left: 14px
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)
+  transition: all 0.2s ease
 
 .nav-btn i:nth-child(1)
   margin-top: 16px
@@ -116,11 +119,13 @@ nav ul li:last-child
 #nav:checked ~ .nav-wrapper
   z-index: 9990
   opacity: 1
+  visibility: visible
 
 
 #nav:checked ~ .nav-wrapper ul li a
   opacity: 1
   transform: translateX(0)
+  
 
 .hidden
   display: none
