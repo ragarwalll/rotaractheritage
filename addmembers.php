@@ -1,9 +1,7 @@
 <?php $carousel="no";
 include ( "./inc/header.inc.php");
 include ("./inc/addmember.inc.php");
-if($userid){
-  Header("Location:home");
-}?>
+?>
 <div class="form">
       <a href="https://127.0.0.1/rotaractheritage/subscription_management" class="previous round">&#8249;</a>
       <h3 id="area">Rotaract</h3>

@@ -3,10 +3,25 @@ include ( "./inc/header.inc.php");
 include ( "./monthly.php");
 ?>
 <div class="head_container">
-    
+     
+</div>
+<div class="load-bar" id="wait">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
 </div>
 <div class="mem_head">
-<p class="">Member's Subscription Area</p>
+<p class="mem_header">Member's Subscription Area</p>
+<a class="export" href="https://127.0.0.1/rotaractheritage/subscription_management" style="padding-left: 6px;"><i class="fas fa-sync-alt"></i></a>
+<a class="export" href="export-book" download><i class="fas fa-external-link-alt"></i></a>
+<div class="search_container">
+    <div class="search-boxx">
+        <input type="text" id="myInput" onkeyup="searchFunction();">
+        <span></span>
+    </div>
+</div>
+
+
 </div>
 <a href="addmembers">
     <div class="add_btn">
@@ -54,14 +69,14 @@ foreach($member as $p){
     $mem_name=$p['name'];
     $mem_email=$p['email_id'];
 
-#DB::query('INSERT INTO subscription VALUES(\'\',\'\',\'\',\'\',\'\',\'\',\'\',\'\',\'\',\'\',\'\',\'\',\'\',:userid)', array(':userid'=>$mem_id));
+
 
 ?>
 <!--Data-->
-    <tr class="dataHover item">
+    <tr class="dataHover item searchfunc">
         <td class="mem_name"><?php echo $mem_name; ?></td>
         <td>
-            <table class="mem_month mem_monthDisplay">
+            <table class="mem_month mem_monthDisplay db">
                 <tr>
                     <td><?php echo $currenMonth=month::displayMonth($mem_id,"Jan"); ?></td>
                     <td><?php echo $currenMonth=month::displayMonth($mem_id,"Feb"); ?></td>
@@ -84,3 +99,60 @@ foreach($member as $p){
 
 <?php } ?>
 </table>
+<script>
+function searchFunction() {
+  // Declare variables 
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = document.querySelectorAll(".searchfunc");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
+</script>
+<script>
+$('form').on('submit',function(e){
+    e.preventDefault();
+    $.ajax({
+        type     : "POST",
+        cache    : false,
+        url      : $(this).attr('action'),
+        success  : function(data) {
+              
+        }
+    });
+    var str1=$(this).html().replace(/\s/g,'');
+    var y ="<inputtype=\"submit\"name=\"paid\"value=\"✔\"class=\"paid\">";
+    var n ="<inputtype=\"submit\"name=\"unpaid\"value=\"✘\"class=\"unpaid\">";  
+    if(str1 == n){
+        $(this).html("<input type='submit' name='unpaid' value='✔' class='paid'>");
+    }
+    else{
+        $(this).html("<input type='submit' name='unpaid' value='✘' class='unpaid'>");
+    }
+    
+
+});
+</script>
+<script>
+$loading=$('#wait').hide()
+$(document).ready(function(){
+    $(document).ajaxStart(function(){
+        $loading.show();
+    });
+    $(document).ajaxStop(function(){
+        $loading.hide();
+    });
+});
+</script>

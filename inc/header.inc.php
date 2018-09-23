@@ -16,18 +16,19 @@ else {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/rotaractheritage/assets/favicon.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/w3sort.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="http://localhost/rotaractheritage/js/w3sort.js"></script>
     <?php if($carousel == "yes"){
-      echo '<link rel="stylesheet" type="text/css" href="slick/slick.css">';
-      echo '<link rel="stylesheet" type="text/css" href="./css/slider.css">';
-      echo '<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">';
+      echo '<link rel="stylesheet" type="text/css" href="http://localhost/rotaractheritage/slick/slick.css">';
+      echo '<link rel="stylesheet" type="text/css" href="http://localhost/rotaractheritage/css/slider.css">';
+      echo '<link rel="stylesheet" type="text/css" href="http://localhost/rotaractheritage/slick/slick-theme.css">';
       echo '<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">';
     }
     ?>
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/preloader.js"></script>
+    <link rel="stylesheet" href="http://localhost/rotaractheritage/css/main.css">
+    <script src="http://localhost/rotaractheritage/js/preloader.js"></script>
     <title>Rotaract | THA</title>
   </head>
   <body>
@@ -47,11 +48,11 @@ else {
             
             <div class="nav-wrapper">
             <ul>
-                <li><a href="./" id="na">Home</a></li>
-                <li><a href="./login" id="na">Sign In/Sign Up</a></li>
+                <li><a href="http://localhost/rotaractheritage/" id="na">Home</a></li>
+                <li><a href="http://localhost/rotaractheritage/login" id="na">Sign In/Sign Up</a></li>
                 <li><a href="#" id="na">Clubs</a></li>
-                <li><a href="./events" id="na">Events</a></li>
-                <li><a href="./members" id="na">Board Members</a></li>
+                <li><a href="http://localhost/rotaractheritage/events" id="na">Events</a></li>
+                <li><a href="http://localhost/rotaractheritage/members" id="na">Board Members</a></li>
                 <li><a href="#" id="na">Contact Us</a></li>
             </ul>
           </div>

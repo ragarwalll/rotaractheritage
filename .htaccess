@@ -21,3 +21,7 @@ ErrorDocument 403 /rotaractheritage
 ErrorDocument 404 /rotaractheritage/error/404.html/
 #Custom 500 errors
 ErrorDocument 500 /rotaractheritage
+
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ subscription_management?stat=$1&con=$2
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/$ subscription_management?stat=$1&con$2
+

@@ -16,5 +16,12 @@ class DB{
       return $data;
     }
   }
+  public static function count($query)
+  {
+    $statement= self::connect()->prepare($query);
+    $statement->execute();
+    $count= $statement->columnCount();
+    return $count;
+  }
 }
 ?>
