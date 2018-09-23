@@ -5,8 +5,8 @@ include ("./inc/addmember.inc.php");
 <div class="form">
       <a href="https://127.0.0.1/rotaractheritage/subscription_management" class="previous round">&#8249;</a>
       <h3 id="area">Rotaract</h3>
-      <h2 id="log">Sign In<br></h2>
-        <h2 id="new-details">with your Rotaract account</h2>
+      <h2 id="log">Add new Members<br></h2>
+        <h2 id="new-details">THA</h2>
         <div class="input">
           <div class="email">
             <form action="" method="POST">

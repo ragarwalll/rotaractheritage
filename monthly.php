@@ -7,13 +7,13 @@ class month{
     $status=DB::query('SELECT `'.$month.'` FROM subscription WHERE id_member=:memberid',array(':memberid'=>$memberID))[0][$month];
 
     if(!DB::query('SELECT `'.$month.'` FROM subscription WHERE id_member=:id',array(':id'=>$memberID))[0][$month]){
-    $post="<form action='http://localhost/rotaractheritage/$month/$monthID' method='post'>
+    $post="<form action='https://127.0.0.1/rotaractheritage/$month/$monthID' method='post'>
             <input type='submit' name='unpaid' value='✘' class='unpaid'>
           </form>
             ";
     }
     else{
-      $post="<form action='http://localhost/rotaractheritage/$month/$monthID' method='post'>
+      $post="<form action='https://127.0.0.1/rotaractheritage/$month/$monthID' method='post'>
             <input type='submit' name='paid' value='✔' class='paid'>
           </form>
   ";

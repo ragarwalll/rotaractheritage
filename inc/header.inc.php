@@ -16,19 +16,19 @@ else {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="http://localhost/rotaractheritage/assets/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://127.0.0.1/rotaractheritage/assets/favicon.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <script src="http://localhost/rotaractheritage/js/w3sort.js"></script>
+    <script src="https://127.0.0.1/rotaractheritage/js/w3sort.js"></script>
     <?php if($carousel == "yes"){
-      echo '<link rel="stylesheet" type="text/css" href="http://localhost/rotaractheritage/slick/slick.css">';
-      echo '<link rel="stylesheet" type="text/css" href="http://localhost/rotaractheritage/css/slider.css">';
-      echo '<link rel="stylesheet" type="text/css" href="http://localhost/rotaractheritage/slick/slick-theme.css">';
+      echo '<link rel="stylesheet" type="text/css" href="https://127.0.0.1/rotaractheritage/slick/slick.css">';
+      echo '<link rel="stylesheet" type="text/css" href="https://127.0.0.1/rotaractheritage/css/slider.css">';
+      echo '<link rel="stylesheet" type="text/css" href="https://127.0.0.1/rotaractheritage/slick/slick-theme.css">';
       echo '<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">';
     }
     ?>
-    <link rel="stylesheet" href="http://localhost/rotaractheritage/css/main.css">
-    <script src="http://localhost/rotaractheritage/js/preloader.js"></script>
+    <link rel="stylesheet" href="https://127.0.0.1/rotaractheritage/css/main.css">
+    <script src="https://127.0.0.1/rotaractheritage/js/preloader.js"></script>
     <title>Rotaract | THA</title>
   </head>
   <body>

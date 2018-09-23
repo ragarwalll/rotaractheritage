@@ -23,5 +23,13 @@ class DB{
     $count= $statement->columnCount();
     return $count;
   }
+  public static function load($query){
+    $run= self::connect()->query($query);
+    $run->setFetchMode(PDO::FETCH_ASSOC);
+    while($r = $run->fetchAll()){
+      return $r;
+    }
+    
+  }
 }
 ?>

@@ -2,15 +2,15 @@
 include ( "./inc/header.inc.php");
 include ( "./monthly.php");
 ?>
-<div class="head_container">
+<div class="head_container" style="position:fixed;">
      
 </div>
-<div class="load-bar" id="wait">
+<div class="load-bar" id="wait" style="position:fixed;">
   <div class="bar"></div>
   <div class="bar"></div>
   <div class="bar"></div>
 </div>
-<div class="mem_head">
+<div class="mem_head" style="position:fixed;">
 <p class="mem_header">Member's Subscription Area</p>
 <a class="export" href="https://127.0.0.1/rotaractheritage/subscription_management" style="padding-left: 6px;"><i class="fas fa-sync-alt"></i></a>
 <a class="export" href="export-book" download><i class="fas fa-external-link-alt"></i></a>
@@ -23,17 +23,17 @@ include ( "./monthly.php");
 
 
 </div>
-<a href="addmembers">
+<a href="addmembers" style="position:fixed;">
     <div class="add_btn">
         <button class="add_mem" href="#open-modal">
             <span class="icon_plus">+</span>
         </button>
     </div>
 </a>
-
-<table class="mem_table" id="myTable">
+<div style="height:140px"></div>
+<table class="mem_table" id="myTable" style=>
 <!--Head-->
-    <tr>
+    <tr style>
         <th class="bottom_table" id="mem_month" onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">Name</th>
         <th class="bottom_table">
             <table class="mem_month">
@@ -63,7 +63,8 @@ include ( "./monthly.php");
 if(isset($_GET['con'])){
     month::paymentStatus($_GET['con'],$_GET['stat']);
 }
-$member=DB::query('SELECT * FROM members');
+$allcount=DB::query('SELECT count(*) FROM subscription')[0]['count(*)'];
+$member=DB::query('SELECT * FROM members order by id asc limit 0,6');
 foreach($member as $p){
     $mem_id=$p['id'];
     $mem_name=$p['name'];
@@ -96,8 +97,11 @@ foreach($member as $p){
             </table>
         </td>
     </tr>
+    
 
 <?php } ?>
+<input type="hidden" id="row" value="0">
+<input type="hidden" id="all" value="<?php echo $allcount; ?>">
 </table>
 <script>
 function searchFunction() {
@@ -121,30 +125,7 @@ function searchFunction() {
   }
 }
 </script>
-<script>
-$('form').on('submit',function(e){
-    e.preventDefault();
-    $.ajax({
-        type     : "POST",
-        cache    : false,
-        url      : $(this).attr('action'),
-        success  : function(data) {
-              
-        }
-    });
-    var str1=$(this).html().replace(/\s/g,'');
-    var y ="<inputtype=\"submit\"name=\"paid\"value=\"✔\"class=\"paid\">";
-    var n ="<inputtype=\"submit\"name=\"unpaid\"value=\"✘\"class=\"unpaid\">";  
-    if(str1 == n){
-        $(this).html("<input type='submit' name='unpaid' value='✔' class='paid'>");
-    }
-    else{
-        $(this).html("<input type='submit' name='unpaid' value='✘' class='unpaid'>");
-    }
-    
 
-});
-</script>
 <script>
 $loading=$('#wait').hide()
 $(document).ready(function(){
@@ -156,3 +137,5 @@ $(document).ready(function(){
     });
 });
 </script>
+<script src="./js/ajax_fetch_subs.js"></script>
+<script src="./js/mem_click.js"></script>
