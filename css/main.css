@@ -1177,6 +1177,23 @@ table {
   font-family: 'Open Sans', sans-serif;
 }
 
+.contact__final {
+  background: #1a73e8;
+  color: white;
+  border: 2px solid #1a73e8;
+  padding: .40em 1.5em;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: normal;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  font-weight: 500;
+  -webkit-transform: translateY(35px);
+      -ms-transform: translateY(35px);
+          transform: translateY(35px);
+}
+
 .overveiw__container__item {
   margin: 0 auto 40px;
 }

@@ -51,10 +51,9 @@ else {
                   <li><a href="javascript: void(0);" id="na">About us</a></li>
                   <li><a href="javascript: void(0);" id="na">Home</a></li>
                   <li><a href="http://localhost/rotaractheritage/login" id="na">Sign In/Sign Up</a></li>
-                  <li><a href="#" id="na">Clubs</a></li>
                   <li><a href="http://localhost/rotaractheritage/events" id="na">Events</a></li>
                   <li><a href="http://localhost/rotaractheritage/members" id="na">Board Members</a></li>
-                  <li><a href="#" id="na">Contact Us</a></li>
+                  <li><a href="contact" id="na">Contact Us</a></li>
               </ul>
           </div>
           <div class="nav-wrapper hidden" id="nav__2">
@@ -68,7 +67,10 @@ else {
               <ul>
                   <li><a href="overview" id="na">Rotaract Overview</a></li>
                   <li><a href="history" id="na">Rotaract History</a></li>
-                  <li><a href="" id="na">Rotaract International</a></li>
+                  <li><a href="" id="na">Standard Rotaract Consitution</a></li>
+                  <li><a href="https://www.rsamdio.org/" id="na" target="_blank">MDIO - RSAMDIO</a></li>
+                  <li><a href="https://www.rotary.org/" id="na" target="_blank">Rotaract International</a></li>
+                  <li><a href="http://rotaract3170.org" id="na" target="_blank">Rotaract 3170</a></li>
               </ul>
           </div>
         </nav>
