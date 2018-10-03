@@ -46,24 +46,54 @@ else {
                 <i id="bar"></i>
             </label>
             
-            <div class="nav-wrapper">
-            <ul>
-                <li><a href="http://localhost/rotaractheritage/" id="na">Home</a></li>
-                <li><a href="http://localhost/rotaractheritage/login" id="na">Sign In/Sign Up</a></li>
-                <li><a href="#" id="na">Clubs</a></li>
-                <li><a href="http://localhost/rotaractheritage/events" id="na">Events</a></li>
-                <li><a href="http://localhost/rotaractheritage/members" id="na">Board Members</a></li>
-                <li><a href="#" id="na">Contact Us</a></li>
-            </ul>
+            <div class="nav-wrapper" id="nav__">
+              <ul>
+                  <li><a href="javascript: void(0);" id="na">About us</a></li>
+                  <li><a href="javascript: void(0);" id="na">Home</a></li>
+                  <li><a href="http://localhost/rotaractheritage/login" id="na">Sign In/Sign Up</a></li>
+                  <li><a href="#" id="na">Clubs</a></li>
+                  <li><a href="http://localhost/rotaractheritage/events" id="na">Events</a></li>
+                  <li><a href="http://localhost/rotaractheritage/members" id="na">Board Members</a></li>
+                  <li><a href="#" id="na">Contact Us</a></li>
+              </ul>
+          </div>
+          <div class="nav-wrapper hidden" id="nav__2">
+              <ul>
+                  <li><a href="http://localhost/rotaractheritage/" id="na">Home</a></li>
+                  <li><a href="http://localhost/rotaractheritage/login" id="na">Sign In/Sign Up</a></li>
+                  <li><a href="#" id="na">Clubs</a></li>
+              </ul>
+          </div>
+          <div class="nav-wrapper" id="nav__aboutus">
+              <ul>
+                  <li><a href="overview" id="na">Rotaract Overview</a></li>
+                  <li><a href="history" id="na">Rotaract History</a></li>
+                  <li><a href="" id="na">Rotaract International</a></li>
+              </ul>
           </div>
         </nav>
       </div>
-    </section>
+    </section><!--
     <script>
       var nav = document.querySelectorAll("#na")
       for(i=0;i<nav.length;i++){
       $(nav[i]).click(function(){
         $('input[type="checkbox"]:checked').prop('checked',false);
       });}
+    </script>-->
+    <script>
+      var ul = document.getElementById("nav__").getElementsByTagName('ul');
+      var aboutus = document.getElementById("nav__aboutus");
+      $(aboutus).hide();
+      for (var i = 0; i < ul.length; i++) {
+        ul[i].addEventListener('click', clickHandler)
+      }
+
+      function clickHandler(e) {
+        if(e.target.innerHTML == "About us"){
+          $(ul).hide();
+          $(aboutus).show();
+        }
+      }
     </script>
 

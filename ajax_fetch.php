@@ -1,8 +1,7 @@
 <?php include ( "./inc/connect.inc.php");
 include ( "./monthly.php");
 $row = (int)$_POST['row'];
-$rowperpage = 5;
-$members = DB::query('SELECT * FROM members limit 5 OFFSET '.$row.';');
+$members = DB::query('SELECT * FROM members limit 6 OFFSET '.$row.';');
 
 foreach($members as $p){
     $mem_id=$p['id'];

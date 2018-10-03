@@ -64,7 +64,7 @@ if(isset($_GET['con'])){
     month::paymentStatus($_GET['con'],$_GET['stat']);
 }
 $allcount=DB::query('SELECT count(*) FROM subscription')[0]['count(*)'];
-$member=DB::query('SELECT * FROM members order by id asc limit 0,6');
+$member=DB::query('SELECT * FROM members order by id asc');
 foreach($member as $p){
     $mem_id=$p['id'];
     $mem_name=$p['name'];
@@ -125,7 +125,7 @@ function searchFunction() {
   }
 }
 </script>
-
+<script src="./js/mem_click.js"></script>
 <script>
 $loading=$('#wait').hide()
 $(document).ready(function(){
@@ -137,5 +137,4 @@ $(document).ready(function(){
     });
 });
 </script>
-<script src="./js/ajax_fetch_subs.js"></script>
-<script src="./js/mem_click.js"></script>
+

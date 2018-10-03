@@ -20,7 +20,7 @@ if(isset($_POST['login']))
         echo "
         <script>
           alert('Incorrect password');
-        </script>";
+        </script>"; 
     }
 
   }
