@@ -32,8 +32,8 @@ if(isset($_POST['reg']))
                   }
                   else
                   {
-                    DB::query('INSERT INTO users VALUES(\'\',:username, :first_name, :last_name, :email, :password, :sign_up_date, \'0\')', array(':username'=>$un,':first_name'=>$fn,':last_name'=>$ln,':email'=>$em,':password'=>password_hash($pswd, PASSWORD_BCRYPT),':sign_up_date'=>$d));
-                    die("<h2>Welcome to El Arte Connect</h2>Login in to get started");
+                      DB::query('INSERT INTO users VALUES(\'\',:username, :first_name, :last_name, :email, :password, :sign_up_date, \'0\')', array(':username'=>$un,':first_name'=>$fn,':last_name'=>$ln,':email'=>$em,':password'=>password_hash($pswd, PASSWORD_BCRYPT),':sign_up_date'=>$d));
+                      die("<h2>Welcome to El Arte Connect</h2>Login in to get started");
                   }
                 }
                 else

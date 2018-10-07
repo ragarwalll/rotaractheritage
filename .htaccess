@@ -1,3 +1,4 @@
+
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
@@ -11,17 +12,20 @@ RewriteRule .* - [L,R=404]
 # RewriteCond %{HTTPS} off
 #    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-#Custom 400 errors
-ErrorDocument 400 /rotaractheritage
-#Custom 401 errors
-ErrorDocument 401 /rotaractheritage
-#/Custom 403 errors
-ErrorDocument 403 /rotaractheritage
-#Custom 404 errors
-ErrorDocument 404 /rotaractheritage/error/404.html/
-#Custom 500 errors
-ErrorDocument 500 /rotaractheritage
+Options -Indexes
 
-RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ subscription_management?stat=$1&con=$2
-RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/$ subscription_management?stat=$1&con$2
+#Subscription Management
+RewriteRule /stat/(.*)/con/(.*)/ subscription_management.php?stat=$1&con=$2
+RewriteRule /stat/(.*)/con/(.*) subscription_management.php?stat=$1&con=$2
 
+# Like
+RewriteRule /like/(.*)/ home.php?like=$1
+RewriteRule /like/(.*) home.php?like=$1
+
+# Comment
+RewriteRule /commenti/(.*)/ home.php?commenti=$1
+RewriteRule /commenti/(.*) home.php?commenti=$1
+
+# Profile
+RewriteRule user/(.*)/ profile.php?user=$1
+RewriteRule user/(.*) profile.php?user=$1

@@ -1,14 +1,10 @@
 <?php
 $carousel="no";
-
 include ( "./inc/header.inc.php");
-
+if(isset($_GET['like'])){
+    echo $_GET['like'];
+}
 ?>
-<div style="height:100vh;background-color: red;">
-<div class="search_container">
-    <div class="search-boxx">
-        <input type="text">
-        <span></span>
-    </div>
-</div>
-</div>  
+<form action="?like=1" method="post">
+<input type="submit">
+</form>

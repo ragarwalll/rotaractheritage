@@ -51,5 +51,3 @@ include ( "./inc/login.inc.php");?>
       }
     </script>
     
-
-<?php include ("./inc/footer.inc.php");?>

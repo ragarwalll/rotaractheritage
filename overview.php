@@ -52,3 +52,6 @@ greeting.innerHTML="Rotaract";
         </table>
     </div>
 </section>
+<?php
+include ("./inc/footer.inc.php");
+?>
