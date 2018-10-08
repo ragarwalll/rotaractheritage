@@ -29,3 +29,15 @@ RewriteRule /commenti/(.*) home.php?commenti=$1
 # Profile
 RewriteRule user/(.*)/ profile.php?user=$1
 RewriteRule user/(.*) profile.php?user=$1
+ 
+# messages
+RewriteRule /a/(.*)/b/(.*)/c/(.*)/d/(.*)/ insert_messages.php?a=$1&b=$2&c=$3&d=$4
+RewriteRule /a/(.*)/b/(.*)/c/(.*)/d/(.*) insert_messages.php?a=$1&b=$2&c=$3&d=$4
+
+#update
+RewriteRule /x/(.*)/y/(.*)/ update_messages.php?x=$1&y=$2
+RewriteRule /x/(.*)/y/(.*) update_messages.php?x=$1&y=$2
+
+#messenger
+RewriteRule /to/(.*)/ messenger.php?to=$1
+RewriteRule /to/(.*) messenger.php?to=$1

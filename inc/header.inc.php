@@ -49,7 +49,7 @@ else {
             <div class="nav-wrapper" id="nav__">
               <ul>
                   <li><a href="javascript: void(0);" id="na">About us</a></li>
-                  <li><a href="index" id="na">Home</a></li>
+                  <li><a href="http://localhost/rotaractheritage/index" id="na">Home</a></li>
                   <li><a href="http://localhost/rotaractheritage/login" id="na">Sign In/Sign Up</a></li>
                   <li><a href="http://localhost/rotaractheritage/events" id="na">Events</a></li>
                   <li><a href="http://localhost/rotaractheritage/members" id="na">Board Members</a></li>
