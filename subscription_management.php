@@ -16,7 +16,7 @@ include ( "./inc/header-logged.inc.php");
 </div>
 <div class="mem_head" style="position:fixed;">
 <p class="mem_header">Member's Subscription Area</p>
-<a class="export" href="https://127.0.0.1/rotaractheritage/subscription_management" style="padding-left: 6px;"><i class="fas fa-sync-alt"></i></a>
+<a class="export" href="<?php print $_SERVER['MYVAR'];?>subscription_management" style="padding-left: 6px;"><i class="fas fa-sync-alt"></i></a>
 <a class="export" href="export-book" download><i class="fas fa-external-link-alt"></i></a>
 <div class="search_container">
     <div class="search-boxx">

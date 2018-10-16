@@ -1,10 +1,7 @@
 <?php
-$carousel="no";
-include ( "./inc/header.inc.php");
-if(isset($_GET['like'])){
-    echo $_GET['like'];
-}
-?>
-<form action="?like=1" method="post">
-<input type="submit">
+$post="<form action='$_SERVER[MYVAR]x/stat' method='post'>
+<input type='submit' name='unpaid' value='✘' class='unpaid'>
 </form>
+";
+echo $post;
+          

@@ -30,8 +30,8 @@ foreach($getposts as $row){
     ?>
     <div class="profile-newfeed">
         <div class="profile--posted-by">
-            <img src="assets/userdata/<?php echo $userdata_post;?>/dp.jpg" height="40" style="border-radius: 50%" alt="">
-            <a href="profile/user/<?php echo $username_post;?>" target="_blank"><?php echo $firstname_post." ".$lastname_post;?></a>
+            <img src="<?php print $_SERVER['MYVAR'];?>assets/userdata/<?php echo $userdata_post;?>/dp.jpg" height="40" style="border-radius: 50%" alt="">
+            <a href="<?php print $_SERVER['MYVAR'];?>profile/user/<?php echo $username_post;?>" target="_blank"><?php echo $firstname_post." ".$lastname_post;?></a>
             <span><?php echo $date_added;?></span>
         </div>
         
@@ -45,7 +45,7 @@ foreach($getposts as $row){
         if($post_image){
         ?>
         <div class="post-image">
-            <img src="./<?php echo $post_image;?>" alt="" class="post-image-content">
+            <img src="<?php print $_SERVER['MYVAR'];?><?php echo $post_image;?>" alt="" class="post-image-content">
         </div>
         <?php }?>
         <div class="post--likes" style="display:inline; padding-right:0px;  ">
@@ -58,7 +58,7 @@ foreach($getposts as $row){
         <hr>
         <div class="post--action">
             <div class="post--like">
-            <form action="home/like/<?php echo $id;?>" method="post" name="like" class="post--like-unlike">
+            <form action="<?php print $_SERVER['MYVAR'];?>home/like/<?php echo $id;?>" method="post" name="like" class="post--like-unlike">
             <?php
             if(DB::query('SELECT user_id_liked FROM likes WHERE post_id=:post_id AND user_id_liked=:id', array(':post_id'=>$id, ':id'=>$userid))){
                 echo '<input type="submit" value="Unlike" class="post-like-form">';
@@ -76,11 +76,11 @@ foreach($getposts as $row){
         <br>
         <div class="profile--comments">
             <div class="profile-post-comment">
-                <form action="home/commenti/<?php echo $id;?>" method="POST" class="abc-comment">
-                    <img src="assets/userdata/<?php echo $userdata_post;?>/dp.jpg" height="25" style="border-radius: 50%;transform: translateY(-12px);" alt="">
+                <form action="<?php print $_SERVER['MYVAR'];?>home/commenti/<?php echo $id;?>" method="POST" class="abc-comment">
+                    <img src="<?php print $_SERVER['MYVAR'];?>assets/userdata/<?php echo $userdata_post;?>/dp.jpg" height="25" style="border-radius: 50%;transform: translateY(-12px);" alt="">
                     <textarea name="comment" id="normal" rows="1" class="text-comment" placeholder="Write your comment here!" style="overflow: hidden; overflow-wrap: break-word; height: 50px;"></textarea>
                     <label for="comment_submit">
-                    <input type="image" src="./assets/img/textarea-post.png" name="send" width="25">
+                    <input type="image" src="<?php print $_SERVER['MYVAR'];?>assets/img/textarea-post.png" name="send" width="25">
                     </label>
                     <input type="submit" name="final_comment" class="comment_submit">
                 </form>
@@ -97,8 +97,8 @@ foreach($getposts as $row){
             ?>
             <div class="comment-all">
                 <div class="comment-all-body">
-                    <img src="assets/userdata/<?php echo $userdata_comment;?>/dp.jpg" height="25" style="border-radius: 50%;transform: translateY(5px);" alt="">
-                    <a href="profile/user/<?php echo $username_comment;?>" target="_blank"><?php echo $firstname_comment." ".$lastname_comment;?></a>
+                    <img src="<?php print $_SERVER['MYVAR'];?>assets/userdata/<?php echo $userdata_comment;?>/dp.jpg" height="25" style="border-radius: 50%;transform: translateY(5px);" alt="">
+                    <a href="<?php print $_SERVER['MYVAR'];?>profile/user/<?php echo $username_comment;?>" target="_blank"><?php echo $firstname_comment." ".$lastname_comment;?></a>
                     <span><?php echo $comments_body['post_body'] ?></span>
                 </div>
             </div><br>

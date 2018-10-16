@@ -15,6 +15,9 @@ if(isset($_GET['account'])){
     elseif($settings == "password"){
         include ( "./settings/password.php");
     }
+    elseif($settings == "name"){
+        include ( "./settings/name.php");
+    }
 
 }
 

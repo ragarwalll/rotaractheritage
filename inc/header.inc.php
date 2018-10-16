@@ -16,10 +16,10 @@ else {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="https://127.0.0.1/rotaractheritage/assets/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?php print $_SERVER['MYVAR'];?>assets/favicon.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <script src="https://127.0.0.1/rotaractheritage/js/w3sort.js"></script>
+    <script src="<?php print $_SERVER['MYVAR'];?>js/w3sort.js"></script>
     <?php if($carousel == "yes"){
       echo '<link rel="stylesheet" type="text/css" href="https://127.0.0.1/rotaractheritage/slick/slick.css">';
       echo '<link rel="stylesheet" type="text/css" href="https://127.0.0.1/rotaractheritage/css/slider.css">';
@@ -27,8 +27,8 @@ else {
       echo '<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">';
     }
     ?>
-    <link rel="stylesheet" href="https://127.0.0.1/rotaractheritage/css/main.css">
-    <script src="https://127.0.0.1/rotaractheritage/js/preloader.js"></script>
+    <link rel="stylesheet" href="<?php print $_SERVER['MYVAR'];?>css/main.css">
+    <script src="<?php print $_SERVER['MYVAR'];?>js/preloader.js"></script>
     <title>Rotaract | THA</title>
   </head>
   <body>
@@ -49,25 +49,18 @@ else {
             <div class="nav-wrapper" id="nav__">
               <ul>
                   <li><a href="javascript: void(0);" id="na">About us</a></li>
-                  <li><a href="http://localhost/rotaractheritage/index" id="na">Home</a></li>
-                  <li><a href="http://localhost/rotaractheritage/login" id="na">Sign In/Sign Up</a></li>
-                  <li><a href="http://localhost/rotaractheritage/events" id="na">Events</a></li>
-                  <li><a href="http://localhost/rotaractheritage/members" id="na">Board Members</a></li>
+                  <li><a href="<?php print $_SERVER['MYVAR'];?>index" id="na">Home</a></li>
+                  <li><a href="<?php print $_SERVER['MYVAR'];?>login" id="na">Sign In/Sign Up</a></li>
+                  <li><a href="<?php print $_SERVER['MYVAR'];?>events" id="na">Events</a></li>
+                  <li><a href="<?php print $_SERVER['MYVAR'];?>members" id="na">Board Members</a></li>
                   <li><a href="https://www.rotasiagoa2019.com/" id="na" target="_blank">Rotasia Goa 2019</a></li>
-                  <li><a href="http://127.0.0.1/rotaractheritage/contact" id="na">Contact Us</a></li>
-              </ul>
-          </div>
-          <div class="nav-wrapper hidden" id="nav__2">
-              <ul>
-                  <li><a href="http://localhost/rotaractheritage/" id="na">Home</a></li>
-                  <li><a href="http://localhost/rotaractheritage/login" id="na">Sign In/Sign Up</a></li>
-                  <li><a href="#" id="na">Clubs</a></li>
+                  <li><a href="<?php print $_SERVER['MYVAR'];?>contact" id="na">Contact Us</a></li>
               </ul>
           </div>
           <div class="nav-wrapper" id="nav__aboutus">
               <ul>
-                  <li><a href="overview" id="na">Rotaract Overview</a></li>
-                  <li><a href="history" id="na">Rotaract History</a></li>
+                  <li><a href="<?php print $_SERVER['MYVAR'];?>overview" id="na">Rotaract Overview</a></li>
+                  <li><a href="<?php print $_SERVER['MYVAR'];?>history" id="na">Rotaract History</a></li>
                   <li><a href="" id="na">Standard Rotaract Consitution</a></li>
                   <li><a href="https://www.rsamdio.org/" id="na" target="_blank">MDIO - RSAMDIO</a></li>
                   <li><a href="https://www.rotary.org/" id="na" target="_blank">Rotaract International</a></li>

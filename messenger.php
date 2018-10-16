@@ -76,7 +76,7 @@ if(isset($_GET['to'])){
         }
     }
 
-    //setInterval(function() {update();},2500)
+    setInterval(function() {update();},2500)
 </script>
     
 
