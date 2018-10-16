@@ -23,13 +23,17 @@
     background:  darken($accent, 15%)
 
 .btn--secondary
-  border: 2px solid $text-main
-  background: $text-inverse
-  color: $text-main
+  border: 2px solid white
+  background: transparent
+  color: white
+  margin-bottom: 10px
+  
   &:hover,
   &:focus
-    background: $text-main
-    color: $text-inverse
+    background: white
+    color: $text-main
+  @media (min-width: 440px)
+    margin-right: 10px
 .icon
   position: absolute
   margin-left: 5px

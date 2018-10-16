@@ -35,9 +35,15 @@ RewriteRule /a/(.*)/b/(.*)/c/(.*)/d/(.*)/ insert_messages.php?a=$1&b=$2&c=$3&d=$
 RewriteRule /a/(.*)/b/(.*)/c/(.*)/d/(.*) insert_messages.php?a=$1&b=$2&c=$3&d=$4
 
 #update
-RewriteRule /x/(.*)/y/(.*)/ update_messages.php?x=$1&y=$2
-RewriteRule /x/(.*)/y/(.*) update_messages.php?x=$1&y=$2
+RewriteRule /x/(.*)/ update_messages.php?x=$1
+RewriteRule /x/(.*) update_messages.php?x=$1
 
 #messenger
 RewriteRule /to/(.*)/ messenger.php?to=$1
 RewriteRule /to/(.*) messenger.php?to=$1
+
+#settings
+RewriteRule /account/(.*)/ settings.php?account=$1
+RewriteRule /account/(.*) settings.php?account=$1
+
+SetEnv MYVAR http://127.0.0.1/rotaractheritage/

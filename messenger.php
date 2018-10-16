@@ -14,7 +14,7 @@ if(isset($_GET['to'])){
 <div class="write--message">
     <input type="text" name="msginput" id="msginput"  class="actual--message" onkeydown="if (event.keyCode == 13) sendmsg();" placeholder="write message...">
 </div>
-<div class="profile--wrapper">
+<div class="profile--wrapper-new">
     <br>
     <br>
     <hr style="margin:8px;">
@@ -41,10 +41,10 @@ if(isset($_GET['to'])){
                 if(item[1] != undefined){
                     if(item[0] == username){
                         //Right side
-                        output += "<div class=\"message_right1\"></div><div class=\"message_right2\"><span>" + item[1] + "</span><h6 style='margin-bottom: 0;'>" + item[2] + "</h6><h6>" + item[3] + "</h6></div><hr style='margin:8px;'>";;
+                        output += "<div class=\"message_right1\"></div><div class=\"message_right2\"><p>" + item[0] + "</p><span>" + item[1] + "</span><h6 style='margin-bottom: 0;'>" + item[2] + "</h6><h6>" + item[3] + "</h6></div><hr style='margin:8px;'>";
                     }
                     else {
-                        output += "<div class=\"message_left1\"><span>" + item[1] + "</span><h6 style='margin-bottom: 0;'>" + item[2] + "</h6></div><div class=\"message_left2\"></div><hr style='margin:8px;'>";
+                        output += "<div class=\"message_left1\"><p>" + item[0] + "</p><span>" + item[1] + "</span><h6 style='margin-bottom: 0;'>" + item[2] + "</h6></div><div class=\"message_left2\"></div><hr style='margin:8px;'>";
                     }
                 }
             }
@@ -52,7 +52,7 @@ if(isset($_GET['to'])){
             msgarea.scrollTop = msgarea.scrollHeight;
             }
         }
-        xmlhttp.open("GET", "http://127.0.0.1/rotaractheritage/update_messages/x/" + username + "/y/" + profile, true);
+        xmlhttp.open("GET", "http://127.0.0.1/rotaractheritage/update_messages/x/" + username, true);
         xmlhttp.send();
     }
 
@@ -75,7 +75,8 @@ if(isset($_GET['to'])){
             xmlhttp.send();
         }
     }
-    setInterval(function() {update();},2500)
+
+    //setInterval(function() {update();},2500)
 </script>
     
 

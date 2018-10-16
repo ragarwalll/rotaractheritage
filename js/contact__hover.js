@@ -11,7 +11,7 @@ username.addEventListener("click", activateItem);
 function activateItem(){
     line1.classList.add("newline")
     username.classList.add("usernameplacing")
-}
+} 
 
 //password click
 pass.addEventListener("click", activateItem1);

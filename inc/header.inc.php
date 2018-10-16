@@ -54,7 +54,7 @@ else {
                   <li><a href="http://localhost/rotaractheritage/events" id="na">Events</a></li>
                   <li><a href="http://localhost/rotaractheritage/members" id="na">Board Members</a></li>
                   <li><a href="https://www.rotasiagoa2019.com/" id="na" target="_blank">Rotasia Goa 2019</a></li>
-                  <li><a href="contact" id="na">Contact Us</a></li>
+                  <li><a href="http://127.0.0.1/rotaractheritage/contact" id="na">Contact Us</a></li>
               </ul>
           </div>
           <div class="nav-wrapper hidden" id="nav__2">
@@ -72,6 +72,7 @@ else {
                   <li><a href="https://www.rsamdio.org/" id="na" target="_blank">MDIO - RSAMDIO</a></li>
                   <li><a href="https://www.rotary.org/" id="na" target="_blank">Rotaract International</a></li>
                   <li><a href="http://rotaract3170.org" id="na" target="_blank">Rotaract 3170</a></li>
+                  <li><a onclick="back();" id="na">back</a></li>
               </ul>
           </div>
         </nav>
@@ -98,5 +99,9 @@ else {
           $(aboutus).show();
         }
       }
-    </script>
 
+      function back(){
+        $(aboutus).hide();
+        $(ul).show();
+      }
+    </script>

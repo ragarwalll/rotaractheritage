@@ -1,5 +1,5 @@
 <?php include ( "./inc/connect.inc.php");
-include ( "./monthly.php");
+include ( "./monthly.php"); 
 $row = (int)$_POST['row'];
 $members = DB::query('SELECT * FROM members limit 6 OFFSET '.$row.';');
 

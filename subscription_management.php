@@ -1,6 +1,10 @@
 <?php $carousel="no"; 
 include ( "./inc/header.inc.php");
 include ( "./monthly.php");
+if(!$userid){
+    die("You must be logged in to vew this page");
+}
+include ( "./inc/header-logged.inc.php");
 ?>
 <div class="head_container" style="position:fixed;">
      
@@ -122,7 +126,7 @@ function searchFunction() {
         tr[i].style.display = "none";
       }
     } 
-  }
+  } 
 }
 </script>
 <script src="./js/mem_click.js"></script>
