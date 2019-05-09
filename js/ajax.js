@@ -1,31 +1,31 @@
-function checkit(){
-    var usernameResponse;
-    var usernameCheck = document.querySelector(".user").value;
-    
-    if(usernameCheck)
-    {
-      $.ajax({
-        type: 'POST',
-        url: 'checkdata',
-        data: {
-          usernameTrue: usernameCheck,
-        },
-          success: function (data) {
-            $( '#email_status' ).html(data);  
-            if(data == "OK")
-            {
-              alert("Hi");
-            }
-            else
-            {
-              return false;
-            }
-  
-          }
-      });
-    }
-    else{
-      $( '#email_status' ).html("");
-      return false;
-    }
+function checkit(){
+    var usernameResponse;
+    var usernameCheck = document.querySelector(".user").value;
+    console.log(usernameCheck);
+    if(usernameCheck)
+    {
+      $.ajax({
+        type: 'POST',
+        url: 'checkusername',
+        data: {
+          usernameTrue: usernameCheck,
+        },
+          success: function (data) {
+            $( '#email_status' ).html(data);  
+            if(data == "OK")
+            {
+              
+            }
+            else
+            {
+              return false;
+            }
+  
+          }
+      });
+    }
+    else{
+      $( '#email_status' ).html("");
+      return false;
+    }
   }

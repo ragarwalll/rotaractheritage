@@ -1,7 +1,7 @@
 .nav-toggle
   display: block
   padding: 1em
-  position: absolute
+  position: fixed
   left: 10px
   top: 16px
   cursor: pointer
@@ -42,6 +42,7 @@
   overflow: hidden
   transition: all ease-in-out 250ms
   display: none
+  position: fixed
 
 
 
@@ -94,14 +95,20 @@ li:last-child
     margin: 0 auto
 
 .rota-150-logo
-    width: auto !important
-    max-width: 25rem
+    width: 100vw !important
+    height: 70px
+    position: fixed
+    top: 0
     margin-left: 30px
+    //background: linear-gradient(to right, #048ca8, #16db93)
+    background: white
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.26)
     margin: 0 auto  
-
-
+    z-index: 99
+    text-align: center
 .rota-150-logo img
     margin: 0 auto
+    margin-top: 20px
  
 
 .grid-header

@@ -10,11 +10,6 @@ $openSans: 'Open Sans', Helvetica, Arial, sans-serif
   @media (max-width: $w) 
     @content
 
-html, body 
-  font-size: 62.5%
-  height: 100%
-  overflow: hidden
-
 svg 
   display: block
   overflow: visible
@@ -93,7 +88,7 @@ svg
     
   
 
-.slider 
+.slider
   z-index: 1
   position: relative
   height: 100%
@@ -138,7 +133,12 @@ svg
 
     .slide__bg 
       left: 0
-      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-3.jpg')
+      background-image: url("../assets/img/events/events1.JPG")
+      background-position: center
+      @media(max-width: 800px)
+        background-image: url("../assets/img/events/events11.JPG")
+        background-position: center top 
+
     
 
     .slide__overlay-path 
@@ -156,7 +156,11 @@ svg
 
     .slide__bg 
       left: -50%
-      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-2.jpg')
+      background-image: url("../assets/img/events/events2.JPG")
+      background-position: center
+      @media(max-width: 800px)
+        background-image: url("../assets/img/events/events21.JPG")
+        background-position: center top right
     
 
     .slide__overlay-path 
@@ -174,7 +178,11 @@ svg
 
     .slide__bg 
       left: -100%
-      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-1.jpg')
+      background-image: url("../assets/img/events/events3.JPG")
+      background-position: center
+      @media(max-width: 800px)
+        background-image: url("../assets/img/events/events31.JPG")
+        background-position: center
     
 
     .slide__overlay-path 
@@ -192,7 +200,11 @@ svg
 
     .slide__bg 
       left: -150%
-      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-4.jpg')
+      background-image: url("../assets/img/events/events4.JPG")
+      background-position: center
+      @media(max-width: 800px)
+        background-image: url("../assets/img/events/events41.JPG")
+        background-position: center
     
 
     .slide__overlay-path 

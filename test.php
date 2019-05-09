@@ -1,7 +1,7 @@
-<?php
-$post="<form action='$_SERVER[MYVAR]x/stat' method='post'>
-<input type='submit' name='unpaid' value='✘' class='unpaid'>
-</form>
-";
-echo $post;
-          
+<?php
+$to="agarwal.rahul324329@gmail.com";
+$subject="hi";
+$txt="new";
+$headers = "From: agarwal.rahul324@gmail.com";
+mail($to,$subject,$txt,$headers);
+?>
